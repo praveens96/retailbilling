@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:8806
--- Generation Time: Nov 21, 2015 at 06:10 AM
+-- Generation Time: Nov 21, 2015 at 06:45 AM
 -- Server version: 5.6.26-log
 -- PHP Version: 5.5.28
 
@@ -541,6 +541,7 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`username`, `passwordhash`, `securityQuestion`, `secQueAns`, `role`) VALUES
 ('admin', '098f6bcd4621d373cade4e832627b4f6', 'who is admin?', 'MeVineethJain', 'admin'),
+('seela', '56ab24c15b72a457069c5ea42fcfc640', '', '', 'admin'),
 ('test', '5a105e8b9d40e1329780d62ea2265d8a', '', '', 'guest');
 
 -- --------------------------------------------------------
