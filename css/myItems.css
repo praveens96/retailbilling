@@ -1,0 +1,22 @@
+.AvailableItem
+{
+	float:left;
+	margin-right:.5em;
+	margin-bottom:.5em;
+	/* width: 201px;
+	height: 80px; */
+	width: 23%;
+	height: 23%;
+	border:1px solid #e0e0e0;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-radius:5px;
+}
+
+
+
+

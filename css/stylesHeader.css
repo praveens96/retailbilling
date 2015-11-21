@@ -1,0 +1,19 @@
+.navbar-brand{
+    /* -webkit-animation: glow1 .5s infinite alternate; */
+	font-size:2.5em;
+	color:#124F90;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+	horizontal-align:middle;
+}
+.container
+{
+	width:100%;
+	/* height:100%; */
+}
+.AvailItemsDiv
+{
+	
+}

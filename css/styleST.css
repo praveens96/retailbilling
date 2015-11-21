@@ -1,0 +1,236 @@
+.navbar-fixed-top {
+    background-color: #633F87;
+    background-image: none;
+}
+.navbar .navbar-collapse .nav >li >a{
+	font-size:16px;
+	color:#F5EED3;
+	
+}
+.navbar-nav > li > a {
+	padding-top:0px;
+	padding-bottom:0px;
+	line-height:32px;
+}
+.navbar .navbar-collapse .nav > li
+{
+	text-align:center;
+	vertical-align:top;
+	display:inline-block;
+	position:relative;
+	margin-top:10px;
+}
+
+.navbar .navbar-collapse .nav >li >a:hover, .navbar .navbar-collapse .nav >li >a:focus , .navbar .navbar-collapse .nav>.active >a{
+	color:#1B7057;
+	background-color:#B6D059;
+	font-weight:bold;
+	border-radius:10px;
+	height:30px;
+}
+
+#BDate
+{
+	float:right;
+}
+#BNo
+{
+	float:left;
+}
+#BillColumn
+{
+	    border-left: thick solid #ff0000;
+
+}
+
+.container
+{
+/* 	display:table;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; */
+}
+
+.row
+{
+/*     height: 100%;
+    display: table-row; */
+}
+
+#divBusinessLogo
+{
+	background-image:url('../images/businesslogo.png');
+	background-repeat:repeat;
+	min-height:150px;
+	min-width:400px;
+	
+}
+
+
+#BillColumn
+{
+	margin-top:0px;
+}
+
+#BillingDiv
+{
+	max-height:700px;
+	float: right;
+}
+
+#AvailItemsDiv
+{
+	overflow-y: auto;
+	max-height:100%;
+	border:1px solid #e0e0e0;
+	clear: both;
+	margin-top: 1%;
+	border-radius:5px;
+}
+/* #BillAmounts input
+{
+	border-radius:4px;
+} */
+.jplist-panel
+{
+	margin-left:1%;
+}
+.stitemname
+{
+	/* background-color: rgba(25, 179, 164, 0.89); */
+	background-color:rgba(81, 117, 202, 0.88);
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+}
+/* .ui-dialog,.ui-dialog,.ui-widget,.ui-widget-header, .ui-widget-content, .ui-corner-all, .foo, .ui-draggable, .ui-resizable 
+{
+	background:none;
+	background-color:rgba(81, 117, 202, 0.88);
+} */
+.ui-widget-header
+{
+	background:none !important; 
+	background-color:rgba(81, 117, 202, 0.88) !important;
+	border-color:white !important;
+}
+
+/* .ui-state-active
+{
+	border-color:rgba(81, 117, 202, 0.88) !important;
+	background-color:rgba(81, 117, 202, 0.88) !important;
+	color:white;
+} */
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active
+{
+	    color: rgba(0, 112, 235, 0.84) !important;
+		    border: 1px solid #50AFFB !important;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
+{
+	color: rgba(0, 112, 235, 0.84) !important;
+}
+
+
+.StatusFail
+{
+	font-weight:bold;
+	color:red;
+}
+.StatusSuccess
+{
+	color:green;
+}
+.DoNotDisplay
+{
+	display:none;
+}
+
+.list-left-nav
+{
+  list-style: none;
+  list-style-type:none;
+	
+}
+
+.list-left-nav li
+{
+	width:10em;
+	height:2em;
+	background-color:rgba(0, 112, 235, 0.84);/*#00BFFF;*/
+	padding-bottom:2px;
+	border:1px solid white;
+	font-size:1.5em;
+	border-radius:5px;
+	padding-left:5px;
+	text-align:center;
+	/* box-shadow: 10px 10px 5px #888888; */
+}
+.ui-datepicker-year {
+   background: #FAAC58;
+   border: 1px solid #555;
+   color: #EEE;
+ }
+.list-left-nav li a
+{
+	text-decoration:none;
+	color:#f1f1f1;
+}
+.list-left-nav .active,.list-left-nav li:hover
+{
+	font-weight:bold;
+	background-color:red;
+}
+
+.loading {
+
+    width: 30px;
+    height: 30px;
+    margin: 10px auto 0 auto;
+    background: url('/st/images/ajax-loader.gif') no-repeat; 
+	background: rgba(255, 255, 255, 0.25);
+	
+}
+.overlay {
+	display: none;
+	z-index: 2;
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	opacity:0.8;
+}
+.loadingImg
+{
+	/* background-image:url("/st/images/ajax-loader.gif") no-repeat;
+	z-index:99999999; */
+	padding-top:22%;
+}
+
+#BillingButtons input[type=button] 
+{
+	width:100%;
+}
+
+input[readonly]
+{
+    background-color:rgb(226, 237, 238);
+}
+
+/* .AvailableItem
+{
+	background-size: 201px 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+} */
+
+#PasswordUpdate
+{
+	display:none;
+}

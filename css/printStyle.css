@@ -1,0 +1,86 @@
+
+/* 
+.printstyling1{
+	color:black; 
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+	
+	}*/
+@font-face {
+  font-family: 'telidonfont';
+  src: url('fonts/tagesschrift.ttf');
+}
+/* @page
+{
+	size:{ size:8.5in 11in};
+} */
+@page
+   {
+    size: 8.5in 5.5in;
+    size: landscape;
+  }
+.printTable{
+	
+	width:150px;
+	font-family:monospace;/* 'telidonfont'; */
+	font-size:10px;
+}
+
+.printTable tr{
+	margin:0;
+    padding:4px;
+	width:100%;
+	margin-left:5%;
+}
+.heading
+{
+	margin-left:10%;
+}
+.InfoRow
+{
+	
+}
+
+.InfoRow td:first-child
+{
+	width:40%;
+}
+.InfoRow td:last-child
+{
+	width:60%;
+}
+.width40
+{
+	width:40%;
+}
+.width60
+{
+	width:60%;
+}
+.printTable tbody tr td
+{
+	float:left;
+	overflow:hidden;
+}
+ 
+
+	html body *{  /* :not(#printBillDIv , #printBillDIv  *) */
+		display:none;
+		/* visibility:hidden; */
+	}
+ 	#printBillDIv , #printBillDIv  table, #printBillDIv  table tbody
+	{
+		display:table !important;
+		table-layout: fixed;
+		width: 150px;
+		/* visibility:visibile; */
+	}
+	#printBillDIv  table tr
+	{
+		display: table-row;
+	}
+	#printBillDIv  table tr td
+	{
+		display: table-cell;
+	}

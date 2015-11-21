@@ -1,0 +1,29 @@
+AND 
+     	(lid_quality_isOld = 0 OR lid_brand_isOld = 0 OR lid_typeofclothing_isOld = 0) 
+AND 
+     	(lid_quality_isOld = 1 OR lid_brand_isOld = 1 OR lid_typeofclothing_isOld = 1)
+		
+		call sp_Purchases("pur5sep","09/05/2015","sel5sep","Shirting","puma","quality3",120,100,"puma5sep",200,10,"puma1","puma.jpg");
+		
+		SELECT SUM(NetBillAmount) as 'Net Sales', SUM(discount) 'Discounts',SUM(AmountReceived) as 'Received Cash' ,SUM(balancetendered) 'Balance tendered' FROM `bill` WHERE Billdate between '2014-12-10' and '2014-12-12'
+		select purchaseitems.itemid,costprice * uniqueids.itemcount as each_item_sale from purchaseitems
+		LEFT JOIN(select itemid,count(itemid) as itemcount from billitems 
+		where BillID in (select billid from bill WHERE billdate between '2015-08-16' and '2015-08-18') group by itemid) uniqueids 
+		on purchaseitems.itemid = uniqueids.itemid 
+		having each_item_sale IS NOT NULL
+		
+		select ia.discount* uniqueids.itemcount as disc,ia.sellingprice* uniqueids.itemcount as sp_sale,pi.itemid,costprice * uniqueids.itemcount as item_cpsale from purchaseitems as pi
+		LEFT JOIN(select itemid,count(itemid) as itemcount from billitems 
+		where BillID in (select billid from bill WHERE billdate between '2015-08-16' and '2015-08-18') group by itemid) uniqueids 
+		on pi.itemid = uniqueids.itemid 
+        LEFT JOIN itemsavailable ia
+        on ia.itemid = pi.itemid
+		having item_cpsale IS NOT NULL
+        
+		
+		select purchaseitems.itemid,costprice * uniqueids.itemcount as item_cp_sale from purchaseitems 
+												LEFT JOIN(select itemid,count(itemid) as itemcount from billitems 
+												where BillID in (select billid from bill WHERE billdate between ? and ?)
+												group by itemid) uniqueids
+												on purchaseitems.itemid = uniqueids.itemid
+												having item_cp_sale IS NOT NULL

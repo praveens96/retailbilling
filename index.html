@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Sadhana Textiles - Home</title>
+	<!-- CSS -->
+		<link href="css/bootstrap.css" rel="stylesheet"></link>
+		<link href='css/googlefonts.css' rel='stylesheet' type='text/css'></link>
+		<link href="css/stylesHeader.css" rel="stylesheet" type="text/css"></link>
+		<link href="css/styleST.css" rel="stylesheet" type="text/css"></link>
+		<link href="jquery.appendGrid-1.4.1.css" rel="stylesheet" type="text/css"/><!-- </link> -->
+		<!-- <link href="css/jquery.appendGrid-development.css" rel="stylesheet" type="text/css"></link> -->
+		<link href="jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<link href="jquery.hoverGrid.css" rel="stylesheet" type="text/css"/>
+		<link href="css/myItems.css" rel="stylesheet" type="text/css"/>
+		<link href="printStyle.css" rel="stylesheet" /> <!-- media="print" -->
+		<link href="css/stylesBillForm.css" rel="stylesheet" />
+		<!-- <link href="jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css"/>
+		 <link href="jquery-ui.structure.css" rel="stylesheet" type="text/css"></link>
+		<link href="jquery-ui.theme.css" rel="stylesheet" type="text/css"></link>
+		  -->
+		<script src="external/jquery/jquery.js"></script>
+		<script src="js/md5.js"></script>
+		<script src="bootstrap.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script src="jquery.appendGrid-1.4.1.js"></script>
+		<script src="jquery.prettyPhoto.js"></script>
+		<script src="jquery.hoverGrid.js"></script>
+		<script src="jresponsive.js"></script>
+		<script src="billgrid.js"></script>
+		<script src="js/myItems.js"></script>
+		<script src="js/printbill.js"></script>
+		<script src="js/homelogin.js"></script>
+		<script src="js/billSubmit.js"></script>
+		<script src="js/jquery.ddslick.min.js"></script>
+		<!-- <script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript" src="jquery.appendGrid-1.4.1.js"></script> -->
+
+	</head>
+	<body>
+		<div id="MainOuterDiv">
+		<!-- Row 1 - Logo,Date -->
+		<div class="container">
+			<?php if($_SESSION['LoggedInUser']){?>
+				<div class="row">	
+					<div class="col-md-1"> 
+						<div class="dropdown"> <span class="dropdown-toggle"></span>
+							<div id="LoggedInUser" class="dropdown-text">
+								
+							</div>
+							
+						</div>
+						<!-- <ul id="userSpot" >
+							<li id="LoggedInUser">
+								<ul id="UserSpotLinks">
+									<li id="signout"><a href="php/login.php?sign=out">Signout</a></li>
+								</ul>
+								
+							</li>
+							
+						</ul> -->
+						<!-- <label id="LoggedInUser"/> -->
+					</div>
+					<div class="col-md-8"> <!-- Logo -->
+						<a href="index.html" class="navbar-brand  col-md-offset-6"  >Sadhana Textiles</a>
+						<a id="logout">logout</a>
+					</div>
+					<!-- <div class="col-md-1">
+					
+					</div> --> <!-- Bill ID -->
+					<div class="col-md-1"> 	
+						
+					</div> <!-- Date & Time -->
+					<div class="col-md-2"> 	
+						<div id="Today"></div> <!-- today -->
+						<div id="clock"></div> <!-- clock -->
+					</div> <!-- Date & Time -->
+				</div>
+				
+			</div>
+			<hr/>
+			
+			<div id="AvailItemsDiv" class="col-md-6">
+				
+			</div> <!-- AvailItemsDiv -->
+			<form id="BillingForm">
+			<div id="BillingDiv" class="col-md-6">
+				<div id="CustomerDetails">
+					<span><label id="lblCustName" for="CustName">Customer Name</label>
+					<input type="text" id="CustName" placeholder="Customer Name" value="seela" required="true"/></span>
+					<span><label id="lblCustMob" for="CustMob">Customer Mobile</label>
+					<input id="CustMob" placeholder="Customer Mobile Number" required="true" value="9032428081"/></span>
+				</div> <!-- CustomerDetails -->
+			
+				<div id="AppendGrid" >
+					<table id="tblAppendGrid">
+					</table>
+				</div><!-- AppendGrid -->
+				
+				<div class="container" id="BillSummary">
+					<div class="row" id="BillAmounts">
+					<br/>
+					<div class="col-md-3">
+							<span> <label class="col-sm-5 control-label" id="lblBillGross" for="GrossAmount" style="padding: 0px;" >Gross</label>
+									<input type="number" class="col-sm-7" id="GrossAmount" style="padding: 0px;" placeholder="Gross" readonly required /></span>
+							<br/><br/>
+							<span><label class="col-sm-5" id="lblTax" for="TaxAmount" style="padding: 0px;">Tax</label>
+							<input type="number" id="TaxAmount" class="col-sm-7" style="padding: 0px;" placeholder="Tax" readonly /></span>
+						</div>
+						<div class="col-md-5">
+							<span><label id="lblTax" for="NetAmount" class="col-sm-2" style="padding: 0px;align:center;">Net</label>
+							<input type="number" id="NetAmount" class="col-sm-10" placeholder="Net" class="col-sm-7" readonly /></span>
+							<br/><br/>
+							<span><label class="col-sm-5" id="lblReceived" for="AmountReceived" style="padding: 0px;">Received</label>
+							<input type="number" id="AmountReceived" class="col-sm-7" style="padding: 0px;" placeholder="Received"/></span>
+						</div>
+						<div class="col-md-4">
+							<span><label id="lblTax" for="Discount" class="col-sm-5" style="padding: 0px;">Discount</label>
+							<input type="number" id="Discount" placeholder="Discount" class="col-sm-6" style="padding: 0px;"/></span>
+							<br/><br/>
+							<span><label class="col-sm-5" id="lblTender" for="BalanceTendered" style="padding: 0px;">Tendered</label>
+							<input type="number" id="BalanceTendered" class="col-sm-7" style="padding: 0px;" placeholder="Balance" readonly/></span>
+						</div>
+					</div>
+				<div><input id="SubmitBill" type="button" class="btn-success" value="Bill"/></div>
+				<div><input id="PrintBill" type="button" class="btn-success" value="Print"/></div>
+				<label id="SubmitStatus" />
+			</div><!-- BillSummary -->
+				
+			<!-- print div -->
+			<div style="display:none;">
+				<div id="printBillDIv" >
+					<p>i am printing this</p>
+				</div>
+			</div>
+			
+			</div> <!-- BillingDiv -->
+		<!-- <div id="hrDiv" class="col-md-12"> -->
+			
+		</div> <!-- AvailItemsDiv -->
+		
+		</form>
+		<hr/>
+		<div class="footer" style="clear:both;">
+			<br/>
+			<!-- <br/> -->
+			<a id="asdx"></a>
+			<p> <center> <a href="index.html"> Sadhana Textiles &copy 2014 </a></center> </p>
+		</div>
+	<!-- JS -->	
+		<!-- <script src="js/jquery.js"></script> --> <!-- http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js -->
+		<!-- <script  src="js/bootstrap.js"></script> -->
+		<script src="js/myClock.js"></script>
+	<!--	<script> 
+			$(function(){
+			alert("ok1");
+			
+			$("").appendTo(document.body).button({
+				icons: {
+				primary: "ui-icon-locked"
+				},
+				text: false
+				});
+			});
+		</script>
+ 		<script src="js/jquery.appendGrid-1.4.1.js"></script>
+		<script src="js/billgrid.js"></script> -->
+		<div data-role="popup" id="LoginPopup">
+			<div class="popupRow">
+				<label for="usrname" class="popupLabel">User Name  </label>
+				<input type="text" id="usrname" placeholder="User Name"/> 
+			</div>
+			<div class="popupRow">
+				<label for="password" class="popupLabel">Password   </label>
+				<input id="password" type="password" placeholder="Password"/>
+			</div>
+			<div class="popupRow btnCenter">
+				<input id="btnLogin" type="button" value="Login"/>
+			</div>
+			<span><label id="LoginStatus" /></span>
+		</div>
+		<script src="js/maths.js"></script>
+		
+		<script src="jquery.printelement.js"></script>
+		</div>
+		<?php } else { javascript:OpenLoginPopup();}?>
+	</body>
+</html>
